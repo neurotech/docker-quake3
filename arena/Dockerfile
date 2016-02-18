@@ -11,6 +11,8 @@ RUN \
   mkdir -p /tmp/build && \
   echo "# FETCH INSTALLATION FILES ######################################" && \
   curl https://raw.githubusercontent.com/ioquake/ioq3/master/misc/linux/server_compile.sh -o /tmp/build/compile.sh && \
+  touch /tmp/build/Makefile.local && \
+  echo "COMPILE_ARCH=x86" >> /tmp/build/Makefile.local && \
   curl http://ioquake3.org/data/quake3-latest-pk3s.zip --referer http://ioquake3.org/extras/patch-data/ -o /tmp/build/quake3-latest-pk3s.zip && \
   echo "# NOW THE INSTALLATION ##########################################" && \
   echo "y" | su ioq3srv -c "sh /tmp/build/compile.sh" && \
