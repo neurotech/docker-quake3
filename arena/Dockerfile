@@ -10,8 +10,7 @@ RUN \
   apk add --update curl g++ gcc git make && \
   mkdir -p /tmp/build && \
   echo "# FETCH INSTALLATION FILES ######################################" && \
-  curl https://raw.githubusercontent.com/ioquake/ioq3/master/misc/linux/server_compile.sh -o /tmp/build/compile.sh && \
-  mkdir /tmp/ioquake3compile && touch /tmp/ioquake3compile/Makefile.local && echo "COMPILE_ARCH=x86" >> /tmp/ioquake3compile/Makefile.local && \
+  curl https://gist.githubusercontent.com/neurotech/be085875d53a332111e2/raw/9d9af6a0135373518e3db9d1ac55037962c32745/compile.sh -o /tmp/build/compile.sh && \
   curl http://ioquake3.org/data/quake3-latest-pk3s.zip --referer http://ioquake3.org/extras/patch-data/ -o /tmp/build/quake3-latest-pk3s.zip && \
   echo "# NOW THE INSTALLATION ##########################################" && \
   echo "y" | su ioq3srv -c "sh /tmp/build/compile.sh" && \
