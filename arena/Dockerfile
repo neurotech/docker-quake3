@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM i386/alpine:3.3
 MAINTAINER neurotech v1.0
 
 # add the user that runs the process
