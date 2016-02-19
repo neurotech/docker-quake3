@@ -22,6 +22,8 @@ RUN \
   rm -rf /var/cache/apk/* && \
   rm -rf /tmp/build/
 
+COPY ["ioq3ded.x86", "/home/ioq3srv/ioquake3"]
+
 USER ioq3srv
 
 EXPOSE 27960/udp

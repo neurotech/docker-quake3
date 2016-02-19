@@ -121,8 +121,6 @@ echo
 ## quake-data container
 echo "${RUNE_INFO} Building and running quake-data container"
 docker run -v /home/ioq3srv/.q3a -v /home/ioq3srv/.q3a/baseq3 -v /home/ioq3srv/.q3a/arena --name quake-data busybox
-### ! Testing ! ###
-docker cp ${HOME}/data/quake3/ioq3ded.x86 quake-data:/home/ioq3srv/.q3a/
 echo "${RUNE_OK} ${FG_GREEN}quake-data image built and container run${RESET}"
 echo
 
