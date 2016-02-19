@@ -1,4 +1,4 @@
-FROM i386/alpine:3.3
+FROM alpine:3.3
 MAINTAINER neurotech v1.0
 
 # add the user that runs the process
@@ -26,4 +26,4 @@ USER ioq3srv
 
 EXPOSE 27960/udp
 
-ENTRYPOINT ["/home/ioq3srv/ioquake3/ioq3ded.i386"]
+ENTRYPOINT ["/home/ioq3srv/ioquake3/ioq3ded.x86"]
